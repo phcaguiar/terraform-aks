@@ -47,7 +47,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
     max_count           = "${var.default_node_max_count}"
     min_count           = "${var.default_node_min_count}"
     max_pods            = "${var.default_node_max_pods}"
-    count               = "${var.default_count}"
+    # count               = "${var.default_count}"
     vnet_subnet_id = "${lookup(local.aks_networks[count.index], "id")}"
   }
 
