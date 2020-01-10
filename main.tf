@@ -43,11 +43,11 @@ resource "azurerm_kubernetes_cluster" "aks" {
     os_disk_size_gb     = "${var.default_node_os_disk_size_gb}"
     enable_auto_scaling = "${var.default_node_enable_auto_scaling}"
     type                = "VirtualMachineScaleSets"
-    node_count          = "${var.default_node_count  }"
-    max_count           = "${var.default_node_max_count  }"
+    node_count          = "${var.default_node_count}"
+    max_count           = "${var.default_node_max_count}"
     min_count           = "${var.default_node_min_count}"
     max_pods            = "${var.default_node_max_pods}"
-    count               = "${var.default_node_count}"
+    count               = "${var.default_count}"
     vnet_subnet_id = "${lookup(local.aks_networks[count.index], "id")}"
   }
 
