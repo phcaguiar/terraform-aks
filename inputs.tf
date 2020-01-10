@@ -66,6 +66,6 @@ variable "default_node_min_count" {
 variable "default_node_max_pods" {
   default   =   "10"
 }
-# variable "default_count" {
-#   default   =   "1"
-# }
+variable "load_balancer_sku" {
+  default   =   "standard"
+}
