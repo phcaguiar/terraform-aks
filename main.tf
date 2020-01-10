@@ -78,6 +78,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
     docker_bridge_cidr = "192.168.128.1/17" # arbitrary, must be customized to avoid conflicts with our datacenters networks
     service_cidr = "192.168.0.0/17" # arbitrary, must be customized to avoid conflicts with our datacenters networks
     dns_service_ip = "192.168.0.10"
-    load_balancer_sku = "standard"
+    load_balancer_sku = "${var.load_balancer_sku}"
   }
 }
